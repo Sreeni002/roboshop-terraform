@@ -8,6 +8,11 @@ resource "aws_instance" "Tfrontend" {
 
 }
 
+output "frontend" {
+    value = aws_instance.Tfrontend.public_ip
+}
+
+
 resource "aws_instance" "Tmongodb" {
   ami           = "ami-0b5a2b5b8f2be4ec2"
   instance_type = "t2.micro"
