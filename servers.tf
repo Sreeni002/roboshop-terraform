@@ -15,7 +15,6 @@ resource "aws_instance" "Tfrontend" {
     tags = {
     Name = "Tfrontend"
     }
-
 }
 
 output "frontend" {
@@ -37,7 +36,6 @@ resource "aws_instance" "Tmongodb" {
     tags = {
     Name = "mongodb"
     }
-
 }
 resource "aws_route53_record" "Tmongodb" {
   zone_id = Z0794332HJ4QD7G3ANWY
@@ -54,7 +52,6 @@ resource "aws_instance" "Tcatalogue" {
     tags = {
     Name = "Tcatalogue"
     }
-
 }
 
 resource "aws_route53_record" "Tcatalogue" {
@@ -72,7 +69,6 @@ resource "aws_instance" "Tredis" {
     tags = {
     Name = "Tredis"
     }
-
 }
 resource "aws_route53_record" "Tredis" {
   zone_id = Z0794332HJ4QD7G3ANWY
@@ -88,7 +84,6 @@ resource "aws_instance" "Tuser" {
     tags = {
     Name = "Tuser"
     }
-
 }
 resource "aws_route53_record" "Tuser" {
   zone_id = Z0794332HJ4QD7G3ANWY
@@ -104,7 +99,6 @@ resource "aws_instance" "Tcart" {
     tags = {
     Name = "Tcart"
     }
-
 }
 resource "aws_route53_record" "Tcart" {
   zone_id = Z0794332HJ4QD7G3ANWY
@@ -121,7 +115,6 @@ resource "aws_instance" "Tmysql" {
     tags = {
     Name = "Tmysql"
     }
-
 }
 resource "aws_route53_record" "Tmysql" {
   zone_id = Z0794332HJ4QD7G3ANWY
@@ -138,7 +131,6 @@ resource "aws_instance" "Tshipping" {
     tags = {
     Name = "Tshipping"
     }
-
 }
 resource "aws_route53_record" "Tshipping" {
   zone_id = Z0794332HJ4QD7G3ANWY
@@ -154,7 +146,6 @@ resource "aws_instance" "Trabbitmq" {
     tags = {
     Name = "Trabbitmq"
     }
-
 }
 resource "aws_route53_record" "Trabbitmq" {
   zone_id = Z0794332HJ4QD7G3ANWY
@@ -171,7 +162,6 @@ resource "aws_instance" "Tpayment" {
     tags = {
     Name = "Tpayment"
     }
-
 }
 resource "aws_route53_record" "Tpayment" {
   zone_id = Z0794332HJ4QD7G3ANWY
