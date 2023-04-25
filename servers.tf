@@ -26,7 +26,7 @@ resource "aws_route53_record" "Tfrontend" {
   name    = "tfrontend-dev.sreenivasulareddydevops.online"
   type    = "A"
   ttl     = 30
-  records = [aws_instance_Tfrontend.private_ip]
+  records = [aws_instance.Tfrontend.private_ip]
 }
 
 resource "aws_instance" "Tmongodb" {
@@ -42,7 +42,7 @@ resource "aws_route53_record" "Tmongodb" {
   name    = "Tmongodb-dev.sreenivasulareddydevops.online"
   type    = "A"
   ttl     = 30
-  records = [aws_instance_Tmongodb.private_ip]
+  records = [aws_instance.Tmongodb.private_ip]
 }
 
 resource "aws_instance" "Tcatalogue" {
@@ -59,7 +59,7 @@ resource "aws_route53_record" "Tcatalogue" {
   name    = "Tcatalogue-dev.sreenivasulareddydevops.online"
   type    = "A"
   ttl     = 30
-  records = [aws_instance_Tcatalogue.private_ip]
+  records = [aws_instance.Tcatalogue.private_ip]
 }
 
 resource "aws_instance" "Tredis" {
@@ -75,7 +75,7 @@ resource "aws_route53_record" "Tredis" {
   name    = "Tredis-dev.sreenivasulareddydevops.online"
   type    = "A"
   ttl     = 30
-  records = [aws_instance_Tredis.private_ip]
+  records = [aws_instance.Tredis.private_ip]
 }
 resource "aws_instance" "Tuser" {
   ami           = data.aws_ami.centos.image_id
@@ -90,7 +90,7 @@ resource "aws_route53_record" "Tuser" {
   name    = "Tuser-dev.sreenivasulareddydevops.online"
   type    = "A"
   ttl     = 30
-  records = [aws_instance_Tuser.private_ip]
+  records = [aws_instance.Tuser.private_ip]
 }
 resource "aws_instance" "Tcart" {
   ami           = data.aws_ami.centos.image_id
@@ -105,7 +105,7 @@ resource "aws_route53_record" "Tcart" {
   name    = "Tcart-dev.sreenivasulareddydevops.online"
   type    = "A"
   ttl     = 30
-  records = [aws_instance_Tcart.private_ip]
+  records = [aws_instance.Tcart.private_ip]
 }
 
 resource "aws_instance" "Tmysql" {
@@ -121,7 +121,7 @@ resource "aws_route53_record" "Tmysql" {
   name    = "Tmysql-dev.sreenivasulareddydevops.online"
   type    = "A"
   ttl     = 30
-  records = [aws_instance_Tmysql.private_ip]
+  records = [aws_instance.Tmysql.private_ip]
 }
 
 resource "aws_instance" "Tshipping" {
@@ -137,7 +137,7 @@ resource "aws_route53_record" "Tshipping" {
   name    = "Tshipping-dev.sreenivasulareddydevops.online"
   type    = "A"
   ttl     = 30
-  records = [aws_instance_Tshipping.private_ip]
+  records = [aws_instance.Tshipping.private_ip]
 }
 resource "aws_instance" "Trabbitmq" {
   ami           = data.aws_ami.centos.image_id
@@ -152,7 +152,7 @@ resource "aws_route53_record" "Trabbitmq" {
   name    = "Trabbitmq-dev.sreenivasulareddydevops.online"
   type    = "A"
   ttl     = 30
-  records = [aws_instance_Trabbitmq.private_ip]
+  records = [aws_instance.Trabbitmq.private_ip]
 }
 
 resource "aws_instance" "Tpayment" {
@@ -168,5 +168,5 @@ resource "aws_route53_record" "Tpayment" {
   name    = "Tpayment-dev.sreenivasulareddydevops.online"
   type    = "A"
   ttl     = 30
-  records = [aws_instance_Tpayment.private_ip]
+  records = [aws_instance.Tpayment.private_ip]
 }
